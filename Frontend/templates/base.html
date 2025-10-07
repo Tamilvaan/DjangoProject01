@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <style>
+    body {
+      background-image: url("https://static.wixstatic.com/media/90dbb4_c3e91d032f0d4978a08a51ba5d758ffa~mv2.png");
+      background-size: cover;
+      background-position: center;
+
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-dark text-white">
+  <div class="container-fluid">
+<!--    <a class="navbar-brand" href="#">Navbar</a>-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/inventory/student/add/">student_add</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/inventory/student/list/">student_list</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+{% block content %}
+
+
+{% endblock %}
+<footer>copyright@2025</footer>
+
+</body>
+</html>

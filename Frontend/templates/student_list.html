@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding:10px;
+
+        }
+        </style>
+
+</head>
+<body>
+<h1><center>STUDENT LIST</center></h1>
+<table>
+    <thead>
+    <tr>
+        <th>first-name</th>
+        <th>last_name</th>
+        <th>email</th>
+        <th>enrollment_number</th>
+        <th>course</th>
+        <th>date_joined</th>
+        <th>update</th>
+        <th>delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for students in allstudents %}
+    <tr>
+        <td>{{students.first_name}}</td>
+        <td>{{students.last_name}}</td>
+        <td>{{students.email}}</td>
+        <td>{{students.enrollment_number}}</td>
+        <td>{{students.course}}</td>
+        <td>{{students.date_joined}}</td>
+
+        <td>
+            <a href="{% url 'student_update' students.id %}">
+
+            <button>update</button></a></td>
+        <td>
+            <a href="{% url 'student_delete' students.id %}">
+
+            <button>delete</button>
+        </a>
+        </td>
+    </tr>
+    </tbody>
+    {% endfor%}
+</table>
+
+{% endblock %}
